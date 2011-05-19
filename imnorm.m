@@ -1,9 +1,9 @@
 %IMNORM    Normalize Gray Scale Image
 %
-%	IMNORM(I) shifts and scales the input gray image I so that it's gray
+%	IMNORM(I) shifts and scales the input gray image I so that its gray
 %	levels are covering the range [0,1]. 
 %
-%	IMNORM(I,[MIN,MAX]) shifts and scales the input gray image I so that it's gray levels
+%	IMNORM(I,[MIN,MAX]) shifts and scales the input gray image I so that its gray levels
 %	are covering the range [MIN,MAX]. 
 %
 %	imshow(I,[])  is the same with J=imnorm(I); imshow(J) 
