@@ -1,16 +1,11 @@
-%IMNORM    Normalize Gray Scale Image
-%
-%	IMNORM(I) shifts and scales the input gray image I so that its gray
-%	levels are covering the range [0,1]. 
-%
-%	IMNORM(I,[MIN,MAX]) shifts and scales the input gray image I so that its gray levels
-%	are covering the range [MIN,MAX]. 
-%
-%	imshow(I,[])  is the same with J=imnorm(I); imshow(J) 
-
-% 10/10/03 G.E. NTUA
-
 function [J multConst addConst] =imnorm(I, bounds)
+%IMNORM Normalize gray scale image
+%
+%   IMNORM(I) shifts and scales the input gray image I so that its gray
+%   levels are covering the range [0,1]. 
+%
+%   IMNORM(I,[MIN,MAX]) shifts and scales the input gray image I so that its gray levels
+%   are covering the range [MIN,MAX]. 
 
 if (nargin < 1),
 	error('Not enough input arguments.');

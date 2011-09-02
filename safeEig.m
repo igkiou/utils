@@ -22,7 +22,7 @@ if (noiseFlag == 1),
 	lvec(abs(lvec) < tol) = 0;
 end;
 
-if (nargout == 1)
+if (nargout < 2)
 	V = lvec;
 else
 	V = V(:,indexes);
