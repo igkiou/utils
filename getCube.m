@@ -1,6 +1,6 @@
 function cube = getCube(name, EXT, wavelengthInds, flipFlag)
 
-if ((nargin < 2) || (isempty(wavelengthInds))),
+if ((nargin < 2) || (isempty(EXT))),
 	EXT = 'tif';
 end;
 
