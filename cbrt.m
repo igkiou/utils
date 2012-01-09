@@ -1,3 +1,3 @@
 function cbrtVals = cbrt(vals)
 
-cvrtVals = vas .^ (1 / 3);
+cbrtVals = vals .^ (1 / 3);
