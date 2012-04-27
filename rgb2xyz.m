@@ -1,4 +1,4 @@
-function Xr = xyz2rgb(X, whitepoint)
+function Xr = rgb2xyz(X, whitepoint)
 
 if ((nargin < 2) || isempty(whitepoint)),
 	whitepoint = 'D65';
@@ -8,10 +8,12 @@ if (strcmpi(whitepoint, 'd50')),
 	Y = [3.1336   -1.6168   -0.4907;
 		-0.9787    1.9161    0.0335;
 		0.0721   -0.2291    1.4054];
+	Y = inv(Y);
 elseif (strcmpi(whitepoint, 'd65')),
 	Y = [3.2406 -1.5372 -0.4986;
 		-0.9689 1.8758 0.0415;
 		0.0557 -0.2040 1.0570];
+	Y = inv(Y);
 else
 	error('Unrecognized white point.');
 end;
