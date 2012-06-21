@@ -1,4 +1,4 @@
-function A = EllipseFitCenter(XY, type)
+function [A params] = EllipseFitCenter(XY, type)
 
 if (nargin < 2),
 	type = 'direct';
@@ -19,7 +19,6 @@ c = params(3);
 d = params(4) / 2;
 f = params(5) / 2;
 g = params(6);
-
 
 A = zeros(2, 1);
 A(1) = (c * d - b * f) / (b ^ 2 - a * c);
