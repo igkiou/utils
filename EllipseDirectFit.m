@@ -1,12 +1,9 @@
-function A = EllipseDirectFit(XY);
+function A = EllipseDirectFit(XY)
 %
 %  Direct ellipse fit, proposed in article
-%    A. W. Fitzgibbon, M. Pilu, R. B. Fisher
-%     "Direct Least Squares Fitting of Ellipses"
-%     IEEE Trans. PAMI, Vol. 21, pages 476-480 (1999)
-%
-%  Our code is based on a numerically stable version
-%  of this fit published by R. Halir and J. Flusser
+%    A. W. Fitzgibbon, M. Pilu, R. B. Fisher,
+%    "Direct Least Squares Fitting of Ellipses",
+%    PAMI 1999.
 %
 %     Input:  XY(n,2) is the array of coordinates of n points x(i)=XY(i,1), y(i)=XY(i,2)
 %
@@ -14,13 +11,7 @@ function A = EllipseDirectFit(XY);
 %             parameters of the fitting ellipse:
 %             ax^2 + bxy + cy^2 +dx + ey + f = 0
 %             the vector A is normed, so that ||A||=1
-%
-%  This is a fast non-iterative ellipse fit.
-%
-%  It returns ellipses only, even if points are
-%  better approximated by a hyperbola.
-%  It is somewhat biased toward smaller ellipses.
-%
+
 centroid = mean(XY);   % the centroid of the data set
 
 D1 = [(XY(:,1)-centroid(1)).^2, (XY(:,1)-centroid(1)).*(XY(:,2)-centroid(2)),...
@@ -42,7 +33,3 @@ A6 = A(6)+A(1)*centroid(1)^2+A(3)*centroid(2)^2+...
      A(2)*centroid(1)*centroid(2)-A(4)*centroid(1)-A(5)*centroid(2);
 A(4) = A4;  A(5) = A5;  A(6) = A6;
 A = A/norm(A);
-
-end  %  EllipseDirectFit
-
-
