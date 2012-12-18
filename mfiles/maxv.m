@@ -1,3 +1,3 @@
-function maxVal = maxv(X)
+function [maxVal maxInd] = maxv(X)
 
-maxVal = max(X(:));
+[maxVal maxInd] = max(X(:));
