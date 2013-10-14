@@ -1,6 +1,6 @@
-function polarc(theta, rho, varargin)
+function h = polarc(theta, rho, varargin)
 
 x = rho .* cos(theta);
 y = rho .* sin(theta);
-plot(x, y, varargin{:});
+h = plot(x, y, varargin{:});
 axis equal
