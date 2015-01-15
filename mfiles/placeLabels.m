@@ -31,5 +31,5 @@ end;
 figure(fig);
 hold on;
 for iter = 1:numLabels,
-	text(coords(1, iter),coords(2, iter), sprintf('%d',labels(iter)), 'FontSize', 15,'Color','k');
+	text(coords(1, iter),coords(2, iter), sprintf('%g',labels(iter)), 'FontSize', 15,'Color','k');
 end;
